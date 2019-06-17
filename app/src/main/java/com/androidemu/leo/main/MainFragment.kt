@@ -20,9 +20,9 @@ class MainFragment: BaseFragment() {
 
     val tabTitles = listOf<String>("本地","分类","下载")
     private val fragmentList = arrayOf<BaseFragment>(
-        NativeFragment.newInstance(),
-        NativeFragment.newInstance(),
-        NativeFragment.newInstance()
+        NativeFragment.newInstance(true),
+        NativeFragment.newInstance(true),
+        NativeFragment.newInstance(true)
     )
 
     override fun getFragmentView(inflater: LayoutInflater, savedInstanceState: Bundle?): View {
@@ -35,9 +35,6 @@ class MainFragment: BaseFragment() {
             offscreenPageLimit = 3
         }
         setToolBarConfig(ToolBarConfig(true,false))
-        fragmentList.forEach {
-            it.setToolBarConfig(ToolBarConfig(false,false))
-        }
         with(tabLayout) {
             tabMode = TabLayout.MODE_FIXED
             setupWithViewPager(viewPager)

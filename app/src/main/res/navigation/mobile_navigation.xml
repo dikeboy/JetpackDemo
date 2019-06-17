@@ -7,6 +7,9 @@
         android:id="@+id/home_dest"
         android:name="com.androidemu.leo.main.MainFragment"
         android:label="Navigation Fragment">
+        <action
+              android:id="@+id/action_gotolist"
+                app:destination="@id/rom_list" />
     </fragment>
 
     <fragment
@@ -18,5 +21,12 @@
             android:id="@+id/rom_detail"
             android:name="com.androidemu.leo.rom.RomDetailFragment"
             android:label="Native">
+        <action
+                android:id="@+id/pop_up_todetail"
+                app:popUpTo="@+id/home_dest"
+                app:popUpToInclusive="true"
+        ></action>
     </fragment>
+
+    <include app:graph="@navigation/navigation_model"></include>
 </navigation>

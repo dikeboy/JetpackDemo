@@ -26,7 +26,7 @@ class RomDetailFragment : BaseModelFragment<RomDetailViewModel>() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         goToMain.setOnClickListener {
-            findNavController().navigate(R.id.home_dest, null)
+            findNavController().navigate(R.id.pop_up_todetail)
         }
     }
 

@@ -23,19 +23,24 @@ import kotlinx.android.synthetic.main.base_content.*
  */
  abstract  class BaseFragment: Fragment(){
     lateinit var  toolBar: Toolbar
-   private var  barConfig = ToolBarConfig()
+    var  barConfig = ToolBarConfig()
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+        doBeforeCreate(inflater,savedInstanceState)
         var view = inflater.inflate(R.layout.base_content,null,false) as LinearLayout
          toolBar = view.findViewById<Toolbar>(R.id.toolbar)
         view.findViewById<LinearLayout>(R.id.containerLayout).addView(getFragmentView(inflater,savedInstanceState))
 
         initToolBar()
          return view
-  }
+    }
+
 
     abstract  fun  getFragmentView(inflater: LayoutInflater, savedInstanceState: Bundle?): View
 
+      open fun  doBeforeCreate(inflater: LayoutInflater, savedInstanceState: Bundle?){
+
+      }
 
     fun setToolBarConfig(config : ToolBarConfig){
        this.barConfig = config
