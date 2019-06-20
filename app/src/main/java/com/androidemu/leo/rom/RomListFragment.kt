@@ -1,5 +1,7 @@
 package com.androidemu.leo.rom
 
+import android.content.Intent
+import android.net.Uri
 import androidx.lifecycle.ViewModelProviders
 import android.os.Bundle
 import android.util.Log
@@ -27,7 +29,12 @@ class RomListFragment  : BaseModelFragment<RomListViewModel>() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         goToMain.setOnClickListener {
-            findNavController().navigate(R.id.rom_detail, null)
+            findNavController().navigate(R.id.action_rom_list_to_rom_detail, null)
+        }
+        goToUri.setOnClickListener{
+            var intent = Intent(Intent.ACTION_VIEW)
+            intent.setData(Uri.parse("https://www.example.com/lesi"))
+            startActivity(intent)
         }
     }
 
