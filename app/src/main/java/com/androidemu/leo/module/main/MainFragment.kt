@@ -1,16 +1,14 @@
-package com.androidemu.leo.main
+package com.androidemu.leo.module.main
 
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
-import androidx.fragment.app.Fragment
 import androidx.viewpager.widget.ViewPager
 import com.androidemu.leo.R
 import com.androidemu.leo.base.BaseFragment
-import com.androidemu.leo.rom.NativeFragment
-import com.androidemu.leo.toolbar.ToolBarConfig
+import com.androidemu.leo.module.rom.NativeFragment
+import com.androidemu.leo.module.toolbar.ToolBarConfig
 import com.google.android.material.tabs.TabLayout
 /**
  *   author : leo

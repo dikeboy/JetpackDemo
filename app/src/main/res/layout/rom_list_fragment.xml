@@ -5,7 +5,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        tools:context=".rom.RomListFragment">
+        tools:context=".module.rom.RomListFragment">
 
     <TextView
             android:layout_width="match_parent"

@@ -1,15 +1,9 @@
 package com.androidemu.leo.base
 
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
-import androidx.fragment.app.Fragment
+import android.util.Log
 import androidx.lifecycle.SavedStateVMFactory
-import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProviders
-import com.androidemu.leo.R
-import com.androidemu.leo.rom.NativeViewModel
 
 /**
  *   author : leo
@@ -17,7 +11,7 @@ import com.androidemu.leo.rom.NativeViewModel
  */
  abstract  class BaseModelFragment<T: BaseViewModel>: BaseFragment() {
 
-    private lateinit var viewModel: T
+    lateinit var viewModel: T
 
 
 
@@ -25,7 +19,15 @@ import com.androidemu.leo.rom.NativeViewModel
         super.onActivityCreated(savedInstanceState)
         val factory = SavedStateVMFactory(this)
         viewModel = ViewModelProviders.of(this,factory).get(getViewModelClass())
+        doPostExecute(savedInstanceState)
     }
 
     abstract  fun getViewModelClass(): Class<T>
+
+    abstract  fun doPostExecute(savedInstanceState: Bundle?)
+
+    override fun onDestroy() {
+        super.onDestroy()
+        Log.e("lin","destroy="+javaClass::getSimpleName)
+    }
 }

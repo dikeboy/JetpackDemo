@@ -4,7 +4,6 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
@@ -13,8 +12,7 @@ import androidx.appcompat.widget.Toolbar
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.androidemu.leo.R
-import com.androidemu.leo.toolbar.ToolBarConfig
-import kotlinx.android.synthetic.main.base_content.*
+import com.androidemu.leo.module.toolbar.ToolBarConfig
 
 
 /**

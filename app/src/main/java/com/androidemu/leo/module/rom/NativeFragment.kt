@@ -1,4 +1,4 @@
-package com.androidemu.leo.rom
+package com.androidemu.leo.module.rom
 
 import android.os.Bundle
 import android.util.Log
@@ -50,5 +50,9 @@ class NativeFragment : BaseModelFragment<NativeViewModel>() {
 
     override fun getTitle(): String {
         return "Navite"
+    }
+
+    override fun doPostExecute(savedInstanceState: Bundle?) {
+
     }
 }

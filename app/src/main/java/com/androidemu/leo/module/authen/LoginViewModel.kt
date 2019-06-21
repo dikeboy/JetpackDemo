@@ -1,4 +1,4 @@
-package com.androidemu.leo.authen
+package com.androidemu.leo.module.authen
 
 import androidx.lifecycle.ViewModel;
 

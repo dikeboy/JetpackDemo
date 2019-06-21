@@ -6,7 +6,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        tools:context=".rom.NativeFragment">
+        tools:context=".module.rom.NativeFragment">
 
     <Button android:id="@+id/goToNext"
             android:layout_marginTop="40dp"

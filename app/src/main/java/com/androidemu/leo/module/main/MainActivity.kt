@@ -1,18 +1,15 @@
-package com.androidemu.leo.main
+package com.androidemu.leo.module.main
 
+import android.app.Application
 import android.content.res.Resources
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.os.PersistableBundle
-import android.util.Log
-import android.widget.Toast
-import androidx.appcompat.widget.Toolbar
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.AppBarConfiguration
 import com.androidemu.leo.R
-
-
+import com.androidemu.leo.cache.database.DatabaseManager
+import com.androidemu.leo.server.HttpServerManager
 
 
 class MainActivity : AppCompatActivity() {
@@ -20,6 +17,9 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        DatabaseManager.updateDb(application)
+
         setContentView(R.layout.activity_main)
 
         val host: NavHostFragment = supportFragmentManager

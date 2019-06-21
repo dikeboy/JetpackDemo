@@ -1,4 +1,4 @@
-package com.androidemu.leo.main
+package com.androidemu.leo.module.main
 
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
