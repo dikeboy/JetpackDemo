@@ -4,10 +4,12 @@ apply plugin: 'kotlin-android'
 
 apply plugin: 'kotlin-android-extensions'
 
+apply plugin: 'kotlin-kapt'
+
 android {
     compileSdkVersion 28
     defaultConfig {
-        applicationId "com.androidemu.leo"
+        applicationId "com.jetpack.leo"
         minSdkVersion 14
         targetSdkVersion 28
         versionCode 1
@@ -50,8 +52,7 @@ dependencies {
     implementation 'com.squareup.retrofit2:retrofit:2.6.0'
 
     //room
-
-    //room
-    implementation "androidx.room:room-runtime:2.1.0"
-
+    implementation "androidx.room:room-runtime:2.1.0-alpha04"
+    kapt "androidx.room:room-compiler:2.1.0-alpha04"
+    implementation 'androidx.room:room-coroutines:2.1.0-alpha04'
 }

@@ -9,20 +9,11 @@ import androidx.room.migration.Migration;
 import androidx.sqlite.db.SupportSQLiteDatabase;
 
 public class DatabaseManager {
-    public  static LogDatabase database;
+    public  static ContriousDatabase database;
 
     public static void updateDb(Application application){
-        database = Room.databaseBuilder(application, LogDatabase.class, "vova_log_cache.db")
+        database = Room.databaseBuilder(application, ContriousDatabase.class, "vova_log_cache.db")
                 .build();
-    }
-
-
-    public static void insertData(LogDbEntity entity){
-        Log.e("lin","database=="+database);
-        if(database!=null){
-            database.logDao().insert(entity);
-            Log.e("lin","tables==="+database.logDao().list(0,100));
-        }
     }
 
 

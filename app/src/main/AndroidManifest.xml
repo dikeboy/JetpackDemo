@@ -8,6 +8,7 @@
             android:label="@string/app_name"
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
+            android:name=".app.MApplication"
             android:theme="@style/AppTheme">
         <activity android:name="com.jetpack.leo.module.main.MainActivity">
             <intent-filter>

@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.util.Log
 import androidx.lifecycle.SavedStateVMFactory
 import androidx.lifecycle.ViewModelProviders
+import java.lang.reflect.ParameterizedType
 
 /**
  *   author : leo
@@ -18,11 +19,12 @@ import androidx.lifecycle.ViewModelProviders
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         val factory = SavedStateVMFactory(this)
-        viewModel = ViewModelProviders.of(this,factory).get(getViewModelClass())
+        viewModel = ViewModelProviders.of(this,factory).get((this.javaClass
+            .genericSuperclass as ParameterizedType)
+            .actualTypeArguments[0] as Class<T>)
         doPostExecute(savedInstanceState)
     }
 
-    abstract  fun getViewModelClass(): Class<T>
 
     abstract  fun doPostExecute(savedInstanceState: Bundle?)
 

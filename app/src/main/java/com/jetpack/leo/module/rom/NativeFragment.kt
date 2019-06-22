@@ -44,9 +44,6 @@ class NativeFragment : BaseModelFragment<NativeViewModel>() {
     }
 
 
-    override fun getViewModelClass(): Class<NativeViewModel> {
-        return NativeViewModel::class.java
-    }
 
     override fun getTitle(): String {
         return "Navite"

@@ -33,18 +33,14 @@ class RomListFragment  : BaseModelFragment<RomListViewModel>() {
         }
 
 
-    }
 
-    override fun getViewModelClass(): Class<RomListViewModel> {
-        return RomListViewModel::class.java
     }
-
 
     override fun getTitle(): String {
         return "List"
     }
 
     override fun doPostExecute(savedInstanceState: Bundle?) {
-        viewModel.loadData()
+        viewModel.saveData()
     }
 }

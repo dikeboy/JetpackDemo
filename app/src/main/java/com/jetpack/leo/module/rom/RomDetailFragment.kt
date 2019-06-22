@@ -12,7 +12,7 @@ import kotlinx.android.synthetic.main.rom_list_fragment.*
 class RomDetailFragment : BaseModelFragment<RomDetailViewModel>() {
 
     companion object {
-        fun newInstance() = RomListFragment()
+        fun newInstance() = RomDetailFragment()
     }
 
     override fun getFragmentView(inflater: LayoutInflater, savedInstanceState: Bundle?): View {
@@ -26,16 +26,12 @@ class RomDetailFragment : BaseModelFragment<RomDetailViewModel>() {
         }
     }
 
-    override fun getViewModelClass(): Class<RomDetailViewModel> {
-        return RomDetailViewModel::class.java
-    }
-
 
     override fun getTitle(): String {
         return "Detail"
     }
 
     override fun doPostExecute(savedInstanceState: Bundle?) {
-
+        viewModel.getData()
     }
 }

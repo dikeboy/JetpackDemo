@@ -26,11 +26,7 @@
             android:id="@+id/rom_detail"
             android:name="com.jetpack.leo.module.rom.RomDetailFragment"
             android:label="Native">
-        <action
-                android:id="@+id/pop_up_todetail"
-                app:popUpTo="@+id/home_dest"
-                app:popUpToInclusive="true"
-        ></action>
+
         <argument android:name="id" app:argType="integer" android:defaultValue="0"/>
     </fragment>
 
@@ -42,4 +38,10 @@
 
         <deepLink android:id="@+id/deepLink" app:uri="www.example.com/{username}"/>
     </fragment>
+    <action
+            android:id="@+id/pop_up_todetail"
+            app:popUpTo="@+id/home_dest"
+            app:popUpToInclusive="true"
+            app:launchSingleTop="false"
+    ></action>
 </navigation>
