@@ -24,7 +24,7 @@ class RomListFragment  : BaseModelFragment<RomListViewModel>() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         goToMain.setOnClickListener {
-            findNavController().navigate(R.id.action_rom_list_to_rom_detail, null)
+            findNavController().navigate(R.id.action_match_to_in_game_nav_graph, null)
         }
         goToUri.setOnClickListener{
             var intent = Intent(Intent.ACTION_VIEW)

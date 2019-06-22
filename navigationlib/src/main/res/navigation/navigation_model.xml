@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
             xmlns:app="http://schemas.android.com/apk/res-auto"
-            android:id="@+id/navigation_model">
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/second_graph"
+            app:startDestination="@id/includedStart">
 
+    <fragment
+        android:id="@+id/includedStart"
+        android:label="fragment_included_start"
+        android:name="com.lin.navigationlib.SecondFragment" />
+    <action android:id="@+id/action_recreate"
+            app:destination="@id/includedStart" />
 </navigation>

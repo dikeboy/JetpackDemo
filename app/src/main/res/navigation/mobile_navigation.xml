@@ -44,4 +44,8 @@
             app:popUpToInclusive="true"
             app:launchSingleTop="false"
     ></action>
+    <action android:id="@+id/action_match_to_in_game_nav_graph"
+            app:destination="@id/second_graph" />
+    <include app:graph="@navigation/navigation_model">
+    </include>
 </navigation>
