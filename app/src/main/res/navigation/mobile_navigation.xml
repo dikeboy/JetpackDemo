@@ -5,7 +5,7 @@
     app:startDestination="@+id/home_dest">
     <fragment
         android:id="@+id/home_dest"
-        android:name="com.androidemu.leo.module.main.MainFragment"
+        android:name="com.jetpack.leo.module.main.MainFragment"
         android:label="Navigation Fragment">
         <action
               android:id="@+id/action_gotolist"
@@ -14,7 +14,7 @@
 
     <fragment
             android:id="@+id/rom_list"
-            android:name="com.androidemu.leo.module.rom.RomListFragment"
+            android:name="com.jetpack.leo.module.rom.RomListFragment"
             android:label="Native">
         <action
                 android:id="@+id/action_gotologin"
@@ -24,7 +24,7 @@
     </fragment>
     <fragment
             android:id="@+id/rom_detail"
-            android:name="com.androidemu.leo.module.rom.RomDetailFragment"
+            android:name="com.jetpack.leo.module.rom.RomDetailFragment"
             android:label="Native">
         <action
                 android:id="@+id/pop_up_todetail"
@@ -37,7 +37,7 @@
 
     <fragment
             android:id="@+id/authen_host"
-            android:name="com.androidemu.leo.module.authen.LoginFragment"
+            android:name="com.jetpack.leo.module.authen.LoginFragment"
             android:label="Login">'
 
         <deepLink android:id="@+id/deepLink" app:uri="www.example.com/{username}"/>

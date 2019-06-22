@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="com.androidemu.leo">
+          package="com.jetpack.leo">
 
     <application
             android:allowBackup="true"
@@ -9,7 +9,7 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
-        <activity android:name="com.androidemu.leo.module.main.MainActivity">
+        <activity android:name="com.jetpack.leo.module.main.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
